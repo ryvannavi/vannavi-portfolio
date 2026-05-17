@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  color: #2d2d2d;
+  background: #faf8f3;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+
+section.hero {
+  min-height: 100vh;
+}
+
+.btn {
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #a85a3a;
+  color: white;
+  box-shadow: 0 6px 20px rgba(168, 90, 58, 0.3);
+}
+
+.btn-primary:hover {
+  background: #8b4a2e;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(168, 90, 58, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #a85a3a;
+  border: 2px solid #a85a3a;
+}
+
+.btn-outline:hover {
+  background: #a85a3a;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(168, 90, 58, 0.3);
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+}

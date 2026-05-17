@@ -1,0 +1,38 @@
+/* === FOOTER STYLES === */
+.footer {
+  background: rgba(45, 45, 45, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid rgba(168, 90, 58, 0.2);
+  margin-top: auto;
+}
+
+.footer p {
+  font-size: 0.85rem;
+  color: #d4c5b9;
+  margin: 0;
+}
+
+.footer .highlight {
+  color: #a85a3a;
+  font-weight: 700;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px 0;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer p {
+    font-size: 0.75rem;
+    padding: 0 10px;
+  }
+}
