@@ -16,14 +16,14 @@ function Experience({ initialTab = 'resume', onTabChange }) {
       id: 1,
       degree: 'Bachelor\'s of Information Technology Management',
       school: 'American University of Phnom Penh',
-      period: 'Junior Student',
+      period: 'Senior Student',
       description: 'Focus on IT system development and web technologies.'
     },
     {
       id: 2,
       degree: 'Bachelor\'s of Computer Science',
       school: 'Fort Hays State University',
-      period: 'Junior Student',
+      period: 'Senior Student',
       description: 'Strong foundation in computer science principles and applications.'
     },
     {
@@ -138,7 +138,7 @@ function Experience({ initialTab = 'resume', onTabChange }) {
             {/* View Resume Button */}
             <div className="resume-download">
               <a 
-                href="https://drive.google.com/file/d/1bMHEmcvOaCc3rU0KQ6P7F9zlAcgSv1at/view?usp=sharing" 
+                href="https://drive.google.com/file/d/1taY2PzKNAwyo9ijRkZUR4y0FEUQIwzwy/view?usp=drive_link" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="download-btn"
