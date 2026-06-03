@@ -10,11 +10,24 @@ function Project() {
       year: 'Apr 2026',
       category: 'ecommerce',
       description: 'Interactive perfume e-commerce website built with React. Features user authentication, shopping cart, and API integration with Mockoon.',
-      image: '🌸',
+      icon: 'fa-solid fa-cart-shopping',
       technologies: ['React', 'JavaScript', 'React Router', 'Bootstrap', 'API'],
       featured: true,
       githubLink: 'https://github.com/ryvannavi/TryToStaySane',
       class: 'INF_651 Front-End Development'
+    },
+    {
+      id: 2,
+      title: 'NovaSupport',
+      subtitle: 'AI-Powered Helpdesk & Support System',
+      year: 'Jun 2026',
+      category: 'fullstack',
+      description: 'Full-stack customer support system built with Laravel 11 and Groq AI. Features AI-generated replies with admin approval workflow, real-time notifications, analytics dashboard, and FAQ knowledge base.',
+      icon: 'fa-solid fa-headset',
+      technologies: ['Laravel', 'PHP', 'SQLite', 'Tailwind CSS', 'Groq AI', 'AlpineJS'],
+      featured: false,
+      githubLink: 'https://github.com/ryvannavi/novasupport',
+      class: 'FYP 401 001 - Final Year Project - I'
     }
   ];
 
@@ -41,7 +54,7 @@ function Project() {
 
               {/* Project Image */}
               <div className="project-image">
-                {project.image}
+                <i className={project.icon} style={{ fontSize: '2.5rem', color: '#a85a3a' }}></i>
               </div>
 
               {/* Project Content */}
