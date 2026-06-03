@@ -12,13 +12,13 @@ function About() {
     {
       degree: "Bachelor's in Information Technology Management",
       university: "American University of Phnom Penh",
-      status: "Junior Student",
+      status: "Senior Student",
       icon: "fa-book",
     },
     {
       degree: "Bachelor's in Computer Science",
       university: "Fort Hays State University",
-      status: "Junior Student",
+      status: "Senior Student",
       icon: "fa-laptop",
     },
     {
