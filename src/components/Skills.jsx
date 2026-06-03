@@ -57,7 +57,7 @@ function Skills() {
         <div className="skills-summary">
           <h2>Technical Overview</h2>
           <p>
-          Full Stack developer with expertise in front-end technologies (HTML, CSS, JavaScript) and foundational backend skills. Experienced in cloud (AWS), user support, and digital platforms, combining technical skills with problem-solving.
+          Full-stack developer with expertise in front-end technologies (HTML, CSS, JavaScript, React.js, Tailwind CSS) and foundational backend skills (Node.js, Laravel, Groq AI, AWS). Experienced in cloud engineering, digital platforms, and user support. Skilled in building interactive web applications, e-commerce platforms, and AI-powered helpdesk systems, combining technical expertise with problem-solving and responsive design principles. Strong focus on writing maintainable code, integrating APIs, and leveraging modern tools to deliver high-quality user experiences.
           </p>
         </div>
       </div>
