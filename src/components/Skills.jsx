@@ -7,12 +7,12 @@ function Skills() {
       id: 1,
       category: 'Full Stack Development',
       icon: 'fa-code',
-      skills: ['HTML', 'CSS', 'JavaScript', 'Web Development', 'AWS', 'Cloud Engineering', 'Backend Tech (basic)']
+      skills: ['HTML, Tailwind CSS, JavaScript', 'Web Development', 'React.js', 'Software Development', 'Cloud Engineering & AWS', 'Backend Tech (basic)']
     },
     {
       id: 2,
       category: 'Tools & Platforms',
-      icon: 'fa-tools',
+      icon: 'fa-tools', 
       skills: ['Microsoft Office', 'Word Document', 'PowerPoint', 'Canvas']
     },
     {
