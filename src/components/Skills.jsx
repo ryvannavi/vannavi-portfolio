@@ -7,7 +7,7 @@ function Skills() {
       id: 1,
       category: 'Full Stack Development',
       icon: 'fa-code',
-      skills: ['HTML, Tailwind CSS, JavaScript', 'Web Development', 'React.js', 'Software Development', 'Cloud Engineering & AWS', 'Backend Tech (basic)']
+      skills: ['HTML, Tailwind CSS, JavaScript', 'Web Development', 'React.js', 'Software Development', 'Cloud Engineering & AWS', 'Backend Tech']
     },
     {
       id: 2,
