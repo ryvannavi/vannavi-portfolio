@@ -138,7 +138,7 @@ function Experience({ initialTab = 'resume', onTabChange }) {
             {/* View Resume Button */}
             <div className="resume-download">
               <a 
-                href="https://drive.google.com/file/d/1taY2PzKNAwyo9ijRkZUR4y0FEUQIwzwy/view?usp=drive_link" 
+                href="https://drive.google.com/file/d/1ubdQ6pWx1Mi2dGvqzDfKOL5E_GnATNrv/view?usp=sharing" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="download-btn"
