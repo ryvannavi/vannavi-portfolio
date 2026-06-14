@@ -27,7 +27,7 @@ function Project() {
       technologies: ['Laravel', 'PHP', 'SQLite', 'Tailwind CSS', 'Groq AI', 'AlpineJS'],
       featured: false,
       githubLink: 'https://github.com/ryvannavi/novasupport',
-      liveLink: null,
+      liveLink: 'https://novasupport-7iva.onrender.com/',
       class: 'FYP 401 001 - Final Year Project - I'
     }
   ];
