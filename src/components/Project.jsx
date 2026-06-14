@@ -1,6 +1,5 @@
 import React from 'react';
 import './Project.css';
-
 function Project() {
   const projects = [
     {
@@ -14,6 +13,7 @@ function Project() {
       technologies: ['React', 'JavaScript', 'React Router', 'Bootstrap', 'API'],
       featured: true,
       githubLink: 'https://github.com/ryvannavi/TryToStaySane',
+      liveLink: 'https://try-to-stay-sane.vercel.app/',
       class: 'INF_651 Front-End Development'
     },
     {
@@ -27,10 +27,10 @@ function Project() {
       technologies: ['Laravel', 'PHP', 'SQLite', 'Tailwind CSS', 'Groq AI', 'AlpineJS'],
       featured: false,
       githubLink: 'https://github.com/ryvannavi/novasupport',
+      liveLink: null,
       class: 'FYP 401 001 - Final Year Project - I'
     }
   ];
-
   return (
     <section className="project">
       <div className="container">
@@ -38,25 +38,19 @@ function Project() {
           <h1>My <span className="highlight">Projects</span></h1>
           <p className="subtitle">Showcasing my work and accomplishments</p>
         </div>
-
         {/* Projects Grid */}
         <div className="projects-grid">
           {projects.map((project) => (
-            <a 
+            <div 
               key={project.id}
-              href={project.githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
               className={`project-card ${project.featured ? 'featured' : ''}`}
             >
               {/* Featured Badge */}
               {project.featured && <span className="featured-badge">Featured</span>}
-
               {/* Project Image */}
               <div className="project-image">
                 <i className={project.icon} style={{ fontSize: '2.5rem', color: '#a85a3a' }}></i>
               </div>
-
               {/* Project Content */}
               <div className="project-content">
                 <h3>{project.title}</h3>
@@ -71,28 +65,42 @@ function Project() {
                 <p className="project-year">
                   <i className="fa-solid fa-calendar"></i> {project.year}
                 </p>
-
                 <p className="project-description">
                   {project.description}
                 </p>
-
                 {/* Technologies */}
                 <div className="technologies">
                   {project.technologies.map((tech, idx) => (
                     <span key={idx} className="tech-tag">{tech}</span>
                   ))}
                 </div>
-
-                {/* View Button */}
-                <button className="view-btn">
-                  <i className="fa-brands fa-github"></i>
-                  View Code
-                </button>
+                {/* Buttons */}
+                <div className="project-buttons">
+                  <a 
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="view-btn"
+                  >
+                    <i className="fa-brands fa-github"></i>
+                    View Code
+                  </a>
+                  {project.liveLink && (
+                    <a 
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="live-btn"
+                    >
+                      <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                      Live Demo
+                    </a>
+                  )}
+                </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
-
         {/* View All Projects Link */}
         <div className="view-all-projects">
           <a href="https://github.com/ryvannavi" target="_blank" rel="noopener noreferrer" className="github-link">
@@ -100,10 +108,8 @@ function Project() {
             View All Projects on GitHub
           </a>
         </div>
-
       </div>
     </section>
   );
 }
-
 export default Project;
