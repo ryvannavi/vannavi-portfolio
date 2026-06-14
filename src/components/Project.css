@@ -244,7 +244,15 @@
   border-color: #a85a3a;
 }
 
-/* === VIEW BUTTON === */
+/* === PROJECT BUTTONS CONTAINER === */
+.project-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+/* === VIEW CODE BUTTON === */
 .view-btn {
   display: inline-flex;
   align-items: center;
@@ -258,8 +266,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: fit-content;
-  margin-top: auto;
+  text-decoration: none;
 }
 
 .view-btn:hover {
@@ -270,6 +277,34 @@
 
 .view-btn i {
   font-size: 0.85rem;
+}
+
+/* === LIVE DEMO BUTTON === */
+.live-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: #a85a3a;
+  border: 1.5px solid #a85a3a;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.live-btn:hover {
+  background: #a85a3a;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(168, 90, 58, 0.3);
+}
+
+.live-btn i {
+  font-size: 0.75rem;
 }
 
 /* === VIEW ALL PROJECTS === */
@@ -367,6 +402,16 @@
   .project-card h3 {
     font-size: 1rem;
   }
+
+  .project-buttons {
+    gap: 8px;
+  }
+
+  .view-btn,
+  .live-btn {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -418,9 +463,14 @@
     padding: 3px 8px;
   }
 
-  .view-btn {
-    font-size: 0.75rem;
-    padding: 6px 12px;
+  .project-buttons {
+    gap: 6px;
+  }
+
+  .view-btn,
+  .live-btn {
+    font-size: 0.7rem;
+    padding: 6px 10px;
   }
 
   .github-link {
