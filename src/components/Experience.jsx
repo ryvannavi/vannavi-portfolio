@@ -39,8 +39,9 @@ function Experience({ initialTab = 'resume', onTabChange }) {
     {
       id: 1,
       title: 'Graphic Design Intern',
-      company: 'Jumpy Jar | Remote',
+      company: 'Jumpy Jar',
       period: 'June 2026 – September 2026',
+      location: 'Sydney, Australia (Remote)',
       description: [
         'Designed child-friendly educational worksheets, activity packs, and classroom resources for children aged 3–5 using Adobe Illustrator and Canva.',
         'Created print-ready layouts, illustrations, and learning materials aligned with EYLF v2.0 standards.'
@@ -75,15 +76,15 @@ function Experience({ initialTab = 'resume', onTabChange }) {
       <div className="container">
         <div className="experience-header">
           <h1>My <span className="highlight">Experience</span></h1>
-          
+
           <div className="tab-toggle">
-            <button 
+            <button
               className={`tab-btn ${selectedTab === 'resume' ? 'active' : ''}`}
               onClick={() => handleTabChange('resume')}
             >
               <i className="fa-solid fa-file-pdf"></i> Resume
             </button>
-            <button 
+            <button
               className={`tab-btn ${selectedTab === 'certification' ? 'active' : ''}`}
               onClick={() => handleTabChange('certification')}
             >
@@ -95,11 +96,11 @@ function Experience({ initialTab = 'resume', onTabChange }) {
         {selectedTab === 'resume' ? (
           <div className="resume-content">
             <div className="resume-grid">
-              
+
               {/* Education Column */}
               <div className="resume-column">
                 <h2 className="section-title">Education</h2>
-                
+
                 <div className="resume-items">
                   {education.map((edu) => (
                     <div key={edu.id} className="resume-item">
@@ -115,7 +116,7 @@ function Experience({ initialTab = 'resume', onTabChange }) {
               {/* Professional Experience Column */}
               <div className="resume-column">
                 <h2 className="section-title">Professional Experience</h2>
-                
+
                 <div className="resume-items">
                   {experience.map((exp) => (
                     <div key={exp.id} className="resume-item">
@@ -137,8 +138,8 @@ function Experience({ initialTab = 'resume', onTabChange }) {
 
             {/* View Resume Button */}
             <div className="resume-download">
-              <a 
-                href="https://drive.google.com/file/d/16OH5njkKtTB5pwK-Pt-we8FLn5W7zhuK/view?usp=sharing" 
+              <a
+                href="https://drive.google.com/file/d/16OH5njkKtTB5pwK-Pt-we8FLn5W7zhuK/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="download-btn"
@@ -150,10 +151,49 @@ function Experience({ initialTab = 'resume', onTabChange }) {
           </div>
         ) : (
           <div className="certification-content">
-            <h2 className="cert-title"> Archivement</h2>
-            <p className="cert-subtitle"> Certifications</p>
-            
+            <h2 className="cert-title">Achievement</h2>
+            <p className="cert-subtitle">Certifications</p>
+
             <div className="certifications-grid">
+              {/* Internship: Jumpy Jar */}
+              <div className="cert-card">
+                <div className="cert-header">
+                  <div className="cert-icon">
+                    <i className="fa-solid fa-pen-ruler"></i>
+                  </div>
+                  <span className="cert-badge">Internship</span>
+                </div>
+
+                <h3>Professional Designer Internship</h3>
+
+                <p className="cert-course">
+                  <i className="fa-solid fa-building"></i>
+                  <a href="https://jumpyjar.com.au" target="_blank" rel="noopener noreferrer">
+                    Jumpy Jar - Sydney, Australia
+                  </a>
+                </p>
+
+                <div className="cert-meta">
+                  <span className="cert-date">
+                    <i className="fa-solid fa-calendar"></i> Jun 2026 - Sep 2026
+                  </span>
+                  <span className="cert-hours">
+                    <i className="fa-solid fa-laptop"></i> Remote
+                  </span>
+                </div>
+
+                <p className="cert-description">
+                  Designed educational resources, printable learning materials, and marketing graphics for early
+                  childhood educators, working to brand identity across weekly briefs and design reviews.
+                </p>
+
+                <div className="cert-links">
+                  <a href="https://drive.google.com/file/d/1KgnRE83PodzR_tK9kckBpZg6_ZL0kUR1/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="cert-link">
+                    <i className="fa-solid fa-file-pdf"></i> Completion Letter
+                  </a>
+                </div>
+              </div>
+
               {/* Certification 1: Cloud Foundations */}
               <div className="cert-card">
                 <div className="cert-header">
@@ -164,7 +204,7 @@ function Experience({ initialTab = 'resume', onTabChange }) {
                 </div>
 
                 <h3>AWS Academy Graduate - Cloud Foundations</h3>
-                
+
                 <p className="cert-course">
                   <i className="fa-solid fa-book"></i>
                   <a href="https://aupp.instructure.com/courses/3650" target="_blank" rel="noopener noreferrer">
@@ -190,7 +230,7 @@ function Experience({ initialTab = 'resume', onTabChange }) {
                     <i className="fa-solid fa-file-pdf"></i> View Certificate
                   </a>
                   <a href="https://www.credly.com/go/tGIOOj4F" target="_blank" rel="noopener noreferrer" className="cert-link">
-                    <i className="fa-solid fa-badge"></i> Credential
+                    <i className="fa-solid fa-award"></i> Credential
                   </a>
                 </div>
               </div>
@@ -205,7 +245,7 @@ function Experience({ initialTab = 'resume', onTabChange }) {
                 </div>
 
                 <h3>AWS Academy Graduate - Cloud Architecting</h3>
-                
+
                 <p className="cert-course">
                   <i className="fa-solid fa-book"></i>
                   <a href="https://aupp.instructure.com/courses/3930" target="_blank" rel="noopener noreferrer">
@@ -231,7 +271,7 @@ function Experience({ initialTab = 'resume', onTabChange }) {
                     <i className="fa-solid fa-file-pdf"></i> View Certificate
                   </a>
                   <a href="https://www.credly.com/go/7d27yPiG" target="_blank" rel="noopener noreferrer" className="cert-link">
-                    <i className="fa-solid fa-badge"></i> Credential
+                    <i className="fa-solid fa-award"></i> Credential
                   </a>
                 </div>
               </div>
@@ -246,7 +286,7 @@ function Experience({ initialTab = 'resume', onTabChange }) {
                 </div>
 
                 <h3>AWS Academy Graduate - Cloud Operations</h3>
-                
+
                 <p className="cert-course">
                   <i className="fa-solid fa-book"></i>
                   <a href="https://aupp.instructure.com/courses/3929" target="_blank" rel="noopener noreferrer">
@@ -272,7 +312,7 @@ function Experience({ initialTab = 'resume', onTabChange }) {
                     <i className="fa-solid fa-file-pdf"></i> View Certificate
                   </a>
                   <a href="https://www.credly.com/go/myWi9WwR" target="_blank" rel="noopener noreferrer" className="cert-link">
-                    <i className="fa-solid fa-badge"></i> Credential
+                    <i className="fa-solid fa-award"></i> Credential
                   </a>
                 </div>
               </div>
