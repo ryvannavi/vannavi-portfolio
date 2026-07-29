@@ -12,6 +12,7 @@ body {
   font-family: 'Poppins', 'Roboto', sans-serif;
   color: #2d2d2d;
   background: #faf8f3;
+  overflow-x: hidden;
 }
 
 .app {
@@ -26,22 +27,65 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 32px;
+  width: 100%;
 }
 
+/* ============================================
+   SECTION LAYOUT
+
+   `align-items: center` on a flex container that
+   is SHORTER than its content overflows equally
+   at both ends — and the top overflow is
+   unreachable by scrolling. That's what was
+   slicing the hero text on mobile.
+
+   `safe center` tells the browser to fall back to
+   flex-start instead of clipping. The media query
+   below is the belt-and-braces version.
+   ============================================ */
 section {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: safe center;
   padding: 80px 0;
+  scroll-margin-top: 90px;
 }
 
-section.hero {
-  min-height: 100vh;
+/* Below tablet, stop forcing full-viewport height
+   and stop centering entirely — content flows. */
+@media (max-width: 900px) {
+  section {
+    min-height: 0;
+    display: block;
+    padding: 64px 0;
+    scroll-margin-top: 80px;
+  }
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  section {
+    padding: 56px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  section {
+    padding: 44px 0;
+  }
+}
+
+/* === BUTTONS === */
 .btn {
   padding: 14px 32px;
   border-radius: 50px;
@@ -79,8 +123,9 @@ section.hero {
   box-shadow: 0 6px 20px rgba(168, 90, 58, 0.3);
 }
 
-@media (max-width: 768px) {
-  section {
-    padding: 60px 0;
-  }
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(168, 90, 58, 0.45);
+  outline-offset: 3px;
 }
