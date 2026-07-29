@@ -38,23 +38,23 @@ function Experience({ initialTab = 'resume', onTabChange }) {
   const experience = [
     {
       id: 1,
-      title: 'Owner & Operator',
-      company: 'Small Business (Online Shop)',
-      period: '2022 - 2025',
+      title: 'Graphic Design Intern',
+      company: 'Jumpy Jar | Remote',
+      period: 'June 2026 – September 2026',
       description: [
-        'Sold skincare products, clothes, and accessories through an online platform.',
-        'Implemented marketing strategies to promote products.'
+        'Designed child-friendly educational worksheets, activity packs, and classroom resources for children aged 3–5 using Adobe Illustrator and Canva.',
+        'Created print-ready layouts, illustrations, and learning materials aligned with EYLF v2.0 standards.'
       ]
     },
     {
       id: 2,
-      title: 'Culinary & Sales Associate',
-      company: 'Empire Pizza',
-      period: '2020 - 2023',
-      location: 'Banteay Meanchey Province',
+      title: 'Online Business Owner',
+      company: 'Small Business (Online Shop)',
+      period: '2022 - 2025',
+      location: 'Online Platform',
       description: [
-        'Prepared and cooked menu items while ensuring quality and consistency.',
-        'Communicated with customers and suppliers professionally to support smooth operations.'
+        'Managed online sales, customer communication, product promotion, and daily order operations.',
+        'Implemented digital marketing strategies to improve customer engagement and sales.'
       ]
     },
     {
@@ -138,7 +138,7 @@ function Experience({ initialTab = 'resume', onTabChange }) {
             {/* View Resume Button */}
             <div className="resume-download">
               <a 
-                href="https://drive.google.com/file/d/1ubdQ6pWx1Mi2dGvqzDfKOL5E_GnATNrv/view?usp=sharing" 
+                href="https://drive.google.com/file/d/16OH5njkKtTB5pwK-Pt-we8FLn5W7zhuK/view?usp=sharing" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="download-btn"
