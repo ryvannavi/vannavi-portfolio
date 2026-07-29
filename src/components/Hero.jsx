@@ -10,6 +10,7 @@ function Hero({ onNavigate }) {
     "Web Developer",
     "AWS Enthusiast",
     "User Support Specialist",
+    "Graphic Designer",
   ];
 
   useEffect(() => {
