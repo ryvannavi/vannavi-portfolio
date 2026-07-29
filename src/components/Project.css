@@ -57,10 +57,9 @@
 /* === PROJECTS GRID === */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 28px;
   margin-bottom: 60px;
-  align-items: start;
 }
 
 .project-card {
@@ -74,7 +73,6 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 100%;
 }
 
 .project-card:hover {
@@ -104,13 +102,14 @@
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
   z-index: 10;
 }
 
 /* === PROJECT IMAGE === */
 .project-image {
   width: 100%;
-  height: 150px;
+  height: 130px;
   background: linear-gradient(135deg, rgba(168, 90, 58, 0.12), rgba(168, 90, 58, 0.05));
   display: flex;
   align-items: center;
@@ -121,7 +120,7 @@
 }
 
 .project-image i {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   color: #a85a3a;
 }
 
@@ -131,17 +130,16 @@
 
 /* === PROJECT CONTENT === */
 .project-content {
-  padding: 24px;
+  padding: 26px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 12px;
 }
 
 .project-card h3 {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: #2d2d2d;
-  margin: 0;
+  margin: 0 0 4px 0;
   font-weight: 700;
   line-height: 1.3;
 }
@@ -150,120 +148,148 @@
   font-size: 0.85rem;
   color: #a85a3a;
   font-weight: 600;
+  margin: 0 0 14px 0;
+}
+
+/* === META ROW === */
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(168, 90, 58, 0.12);
+}
+
+.project-class,
+.project-year {
+  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin: 0;
 }
 
 .project-class {
-  font-size: 0.8rem;
-  color: #666;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 0;
-}
-
-.project-class i {
-  color: #a85a3a;
-  font-size: 0.85rem;
+  color: #6b6b6b;
 }
 
 .project-year {
-  font-size: 0.8rem;
   color: #a85a3a;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 0;
   font-weight: 600;
 }
 
+.project-class i,
 .project-year i {
-  font-size: 0.85rem;
+  color: #a85a3a;
+  font-size: 0.8rem;
 }
 
+/* === DESCRIPTION === */
 .project-description {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #555;
-  line-height: 1.6;
-  margin: 0;
+  line-height: 1.65;
+  margin: 0 0 16px 0;
+}
+
+/* === KEY FEATURES === */
+.project-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.project-features li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 0.83rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.project-features li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #a85a3a;
 }
 
 /* === DEMO CREDENTIALS === */
 .project-demo {
   background: rgba(168, 90, 58, 0.05);
-  border: 1px solid rgba(168, 90, 58, 0.15);
+  border: 1px solid rgba(168, 90, 58, 0.14);
   border-radius: 10px;
-  padding: 16px 18px;
-  margin: 4px 0;
+  padding: 14px 16px;
+  margin-bottom: 18px;
 }
 
 .demo-title {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.8rem;
+  gap: 7px;
+  font-size: 0.72rem;
   font-weight: 700;
   color: #a85a3a;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin: 0 0 12px 0;
+  letter-spacing: 0.6px;
+  margin: 0 0 10px 0;
 }
 
 .demo-title i {
-  font-size: 0.8rem;
+  font-size: 0.72rem;
 }
 
 .demo-accounts {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .demo-account {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 .demo-role {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: white;
   background: #a85a3a;
-  padding: 4px 10px;
+  padding: 3px 9px;
   border-radius: 20px;
   flex-shrink: 0;
-  min-width: 74px;
+  min-width: 68px;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 }
 
-.demo-fields {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.demo-fields code {
+.demo-account code {
   font-family: 'SF Mono', Menlo, Monaco, Consolas, 'Courier New', monospace;
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   color: #5a5a5a;
   background: white;
   border: 1px solid rgba(168, 90, 58, 0.15);
-  padding: 4px 9px;
-  border-radius: 6px;
+  padding: 3px 8px;
+  border-radius: 5px;
   user-select: all;
 }
 
 .demo-note {
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   color: #6b6b6b;
-  line-height: 1.55;
-  margin: 12px 0 0 0;
-  font-style: italic;
+  line-height: 1.5;
+  margin: 10px 0 0 0;
 }
 
 /* === TECHNOLOGIES === */
@@ -271,11 +297,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin: 8px 0;
+  margin-bottom: 20px;
 }
 
 .tech-tag {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   background: rgba(168, 90, 58, 0.08);
   color: #a85a3a;
   padding: 4px 10px;
@@ -296,7 +322,6 @@
   gap: 12px;
   flex-wrap: wrap;
   margin-top: auto;
-  padding-top: 8px;
 }
 
 .view-btn {
@@ -423,7 +448,7 @@
   }
 
   .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 24px;
   }
 }
@@ -443,19 +468,19 @@
   }
 
   .project-image {
-    height: 120px;
+    height: 110px;
   }
 
   .project-image i {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
 
   .project-content {
-    padding: 20px;
+    padding: 22px;
   }
 
   .project-card h3 {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -472,47 +497,41 @@
     font-size: 0.95rem;
   }
 
-  .projects-grid {
-    gap: 20px;
-  }
-
   .project-image {
-    height: 100px;
+    height: 95px;
   }
 
   .project-image i {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   .project-content {
-    padding: 16px;
+    padding: 18px;
   }
 
   .project-card h3 {
-    font-size: 1rem;
+    font-size: 1.05rem;
+  }
+
+  .project-meta {
+    gap: 8px;
+    flex-direction: column;
   }
 
   .project-description {
+    font-size: 0.85rem;
+  }
+
+  .project-features li {
     font-size: 0.8rem;
   }
 
-  .project-demo {
-    padding: 14px;
-  }
-
   .demo-account {
-    flex-direction: column;
     align-items: flex-start;
-    gap: 6px;
   }
 
-  .demo-fields code {
-    font-size: 0.72rem;
-  }
-
-  .tech-tag {
+  .demo-account code {
     font-size: 0.7rem;
-    padding: 3px 8px;
   }
 
   .project-links {
@@ -522,7 +541,6 @@
   .project-links .view-btn {
     width: 100%;
     justify-content: center;
-    font-size: 0.8rem;
   }
 
   .github-link {
