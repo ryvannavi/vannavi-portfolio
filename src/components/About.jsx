@@ -36,9 +36,17 @@ function About() {
 
   const interests = [
     { icon: "fa-code", text: "Web Development" },
+    { icon: "fa-pen-ruler", text: "Design & Visual" },
     { icon: "fa-cloud", text: "Cloud Engineering" },
     { icon: "fa-lightbulb", text: "Innovation" },
     { icon: "fa-globe", text: "Global Perspective" },
+  ];
+
+  const stats = [
+    { number: "3", label: "Projects Completed" },
+    { number: "3", label: "Work Experiences" },
+    { number: "3", label: "AWS Certifications" },
+    { number: "2", label: "Degrees" },
   ];
 
   return (
@@ -49,7 +57,7 @@ function About() {
             About <span className="highlight">Me</span>
           </h1>
           <p className="subtitle">
-            Information Technologies Management | Computer Sicenes{" "}
+            Information Technology Management | Computer Science
           </p>
         </div>
 
@@ -59,37 +67,32 @@ function About() {
           <div className={`about-intro ${isVisible ? "fade-in" : ""}`}>
             <h2>Who I Am</h2>
             <p>
-              As an Information Technology Management and Computer Science
-              student, I am deeply passionate about exploring, learning, and
-              applying emerging technologies. Motivated by curiosity and a
-              commitment to continuous growth, I actively seek opportunities to
-              gain hands-on experience and contribute to innovative projects
-              that make a meaningful impact.
+              I'm an Information Technology Management and Computer Science
+              student who works across both sides of a product — the code that
+              runs it and the design that makes people want to use it. I build
+              web applications with React and Laravel, and I've earned three AWS
+              Academy certifications in cloud foundations, architecting, and
+              operations.
             </p>
 
             <p>
-              I aim to expand my practical skills in dynamic and collaborative
-              environments. By combining technical knowledge with
-              problem-solving abilities, my goal is to become a technology
-              professional who bridges the gap between innovative ideas and
-              real-world solutions, delivering value through creativity and
-              expertise.
+              In 2026 I completed a professional design internship at Jumpy Jar
+              in Sydney, working remotely to produce educational resources and
+              marketing graphics for early childhood educators. It taught me to
+              work to a brand identity, take feedback in weekly design reviews,
+              and ship to deadline across a nine-hour time difference. I'm now
+              looking for work where that mix of development and design is
+              genuinely useful.
             </p>
 
             {/* Stats */}
             <div className="about-stats">
-              <div className="stat-item">
-                <div className="stat-number">1</div>
-                <div className="stat-label">Project Completed</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">3</div>
-                <div className="stat-label">Work Experiences</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">2</div>
-                <div className="stat-label">Degrees</div>
-              </div>
+              {stats.map((stat, index) => (
+                <div key={index} className="stat-item">
+                  <div className="stat-number">{stat.number}</div>
+                  <div className="stat-label">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -162,8 +165,10 @@ function About() {
           <div className="soft-skills-tags">
             {[
               "Team Collaboration",
+              "Remote Work",
               "Communication",
               "Problem Solving",
+              "Attention to Detail",
               "Quick Learner",
               "Time Management",
               "Adaptability",
