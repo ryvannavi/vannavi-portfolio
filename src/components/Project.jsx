@@ -9,7 +9,13 @@ function Project() {
       subtitle: 'Perfume E-Commerce Platform',
       year: 'Apr 2026',
       category: 'ecommerce',
-      description: 'Interactive perfume e-commerce website built with React. Features user authentication, shopping cart, and API integration with Mockoon.',
+      description: 'A front-end storefront for a curated perfume catalogue, built in React with client-side routing and a mock REST API.',
+      features: [
+        'Product catalogue with search and category filtering',
+        'User registration and login flow',
+        'Persistent shopping cart and checkout',
+        'Mockoon mock API for product and order data'
+      ],
       icon: 'fa-solid fa-cart-shopping',
       technologies: ['React', 'JavaScript', 'React Router', 'Bootstrap', 'API'],
       featured: true,
@@ -23,7 +29,13 @@ function Project() {
       subtitle: 'AI-Powered Helpdesk & Support System',
       year: 'Jun 2026',
       category: 'fullstack',
-      description: 'Full-stack helpdesk platform built with Laravel 11 and Groq AI. Customers submit tickets through a public support center, and Groq drafts a suggested reply that an admin reviews, edits, and approves before it sends — keeping a human in the loop rather than letting the AI answer unsupervised. Includes role-based authentication for admin and customer accounts, ticket status and priority tracking, real-time notifications, an analytics dashboard for response times and ticket volume, and a searchable knowledge base of six documentation categories that deflects repeat questions before they become tickets.',
+      description: 'A customer support platform where Groq AI drafts ticket replies for an admin to review and approve before they send.',
+      features: [
+        'AI-drafted replies with admin approval workflow',
+        'Role-based access for admins and customers',
+        'Analytics dashboard for volume and response times',
+        'Searchable FAQ knowledge base across six categories'
+      ],
       icon: 'fa-solid fa-headset',
       technologies: ['Laravel 11', 'PHP', 'SQLite', 'Tailwind CSS', 'Groq AI', 'AlpineJS'],
       featured: false,
@@ -31,7 +43,7 @@ function Project() {
       liveLink: 'https://novasupport-sg.onrender.com',
       class: 'FYP 401 001 - Final Year Project - I',
       demo: {
-        note: 'Hosted on a free tier, so the first load can take up to a minute while the server wakes up. You can also register a new account on either side to test the full sign-up flow.',
+        note: 'First load may take a minute while the free-tier server wakes up.',
         accounts: [
           { role: 'Admin', email: 'mollyadm@gmail.com', password: '12345678' },
           { role: 'Customer', email: 'bobo@gmail.com', password: '12345678' }
@@ -68,19 +80,29 @@ function Project() {
                 <h3>{project.title}</h3>
                 <p className="project-subtitle-text">{project.subtitle}</p>
 
-                {project.class && (
-                  <p className="project-class">
-                    <i className="fa-solid fa-book"></i> {project.class}
-                  </p>
-                )}
-
-                <p className="project-year">
-                  <i className="fa-solid fa-calendar"></i> {project.year}
-                </p>
+                <div className="project-meta">
+                  {project.class && (
+                    <span className="project-class">
+                      <i className="fa-solid fa-book"></i> {project.class}
+                    </span>
+                  )}
+                  <span className="project-year">
+                    <i className="fa-solid fa-calendar"></i> {project.year}
+                  </span>
+                </div>
 
                 <p className="project-description">
                   {project.description}
                 </p>
+
+                {/* Key Features */}
+                {project.features && (
+                  <ul className="project-features">
+                    {project.features.map((feature, idx) => (
+                      <li key={idx}>{feature}</li>
+                    ))}
+                  </ul>
+                )}
 
                 {/* Demo Credentials */}
                 {project.demo && (
@@ -93,10 +115,8 @@ function Project() {
                       {project.demo.accounts.map((account, idx) => (
                         <div key={idx} className="demo-account">
                           <span className="demo-role">{account.role}</span>
-                          <div className="demo-fields">
-                            <code>{account.email}</code>
-                            <code>{account.password}</code>
-                          </div>
+                          <code>{account.email}</code>
+                          <code>{account.password}</code>
                         </div>
                       ))}
                     </div>
