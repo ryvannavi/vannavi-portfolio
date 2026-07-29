@@ -10,7 +10,7 @@
 /* Animated background elements */
 .about::before {
   content: '';
-  position: fixed;
+  position: absolute;
   top: -50%;
   right: -20%;
   width: 600px;
@@ -23,7 +23,7 @@
 
 .about::after {
   content: '';
-  position: fixed;
+  position: absolute;
   bottom: -30%;
   left: -10%;
   width: 500px;
@@ -113,6 +113,15 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .about-header,
+  .lang-progress {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 /* === ABOUT INTRO === */
 .about-intro h2 {
   font-size: 2.2rem;
@@ -136,9 +145,9 @@
 /* === STATS === */
 .about-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 32px 24px;
   background: white;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
@@ -155,21 +164,23 @@
 }
 
 .stat-number {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: 800;
   background: linear-gradient(135deg, #a85a3a 0%, #d68b62 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 8px;
+  line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   color: #6b6b6b;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
 }
 
 /* === DETAILS SECTION === */
@@ -336,12 +347,12 @@
 
 .interests-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
 }
 
 .interest-card {
-  padding: 40px;
+  padding: 30px 18px;
   background: white;
   border-radius: 16px;
   text-align: center;
@@ -357,15 +368,16 @@
 }
 
 .interest-icon {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   color: #a85a3a;
   margin-bottom: 16px;
 }
 
 .interest-card p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #2d2d2d;
+  line-height: 1.4;
 }
 
 /* === SOFT SKILLS SECTION === */
@@ -401,7 +413,7 @@
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.3s ease;
-  cursor: pointer;
+  cursor: default;
   box-shadow: 0 4px 12px rgba(168, 90, 58, 0.1);
 }
 
@@ -417,13 +429,32 @@
 }
 
 /* === RESPONSIVE DESIGN === */
-@media (max-width: 1024px) {
+@media (max-width: 1180px) {
   .about-content {
     gap: 50px;
   }
 
-  .interests-grid {
+  .about-stats {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 32px;
+  }
+
+  .stat-number {
+    font-size: 2.6rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .interests-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .interest-card {
+    padding: 36px 24px;
   }
 }
 
@@ -446,7 +477,7 @@
   }
 
   .about-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 30px;
   }
@@ -492,8 +523,17 @@
   }
 
   .about-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
     padding: 20px;
+  }
+
+  .stat-number {
+    font-size: 1.9rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
   }
 
   .education-item {
@@ -508,15 +548,20 @@
   }
 
   .interests-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
   .interest-card {
-    padding: 25px;
+    padding: 22px 14px;
   }
 
   .interest-icon {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .interest-card p {
+    font-size: 0.9rem;
   }
 
   .soft-skills-tags {
