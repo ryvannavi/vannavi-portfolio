@@ -20,7 +20,7 @@ function Project() {
       technologies: ['React', 'JavaScript', 'React Router', 'Bootstrap', 'API'],
       featured: true,
       githubLink: 'https://github.com/ryvannavi/TryToStaySane',
-      liveLink: 'https://trytostaysame33.netlify.app',
+      liveLink: 'https://try-to-stay-sane.vercel.app/',
       class: 'INF_651 Front-End Development'
     },
     {
