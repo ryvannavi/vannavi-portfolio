@@ -1,38 +1,220 @@
-/* === FOOTER STYLES === */
-.footer {
-  background: rgba(45, 45, 45, 0.95);
-  backdrop-filter: blur(10px);
-  padding: 20px 0;
-  text-align: center;
-  border-top: 1px solid rgba(168, 90, 58, 0.2);
-  margin-top: auto;
+/* === CONTACT PAGE === */
+.contact {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+  min-height: 100vh;
+  padding: 120px 30px 80px 30px;
 }
 
-.footer p {
-  font-size: 0.85rem;
-  color: #d4c5b9;
+.contact .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.contact-header h1 {
+  font-size: 3.5rem;
+  color: var(--text);
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.contact-header .highlight {
+  color: var(--accent);
+}
+
+.contact-header .subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
   margin: 0;
 }
 
-.footer .highlight {
-  color: #a85a3a;
+/* === CONTACT GRID === */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* === CONTACT INFO ITEMS === */
+.info-item {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 60px;
+  padding-bottom: 0;
+  border-bottom: none;
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.info-item:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.info-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(var(--accent-rgb), 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-icon i {
+  color: var(--accent);
+  font-size: 1.8rem;
+}
+
+.info-item h4 {
+  font-size: 1.5rem;
+  color: var(--text);
+  margin: 0 0 10px 0;
   font-weight: 700;
+}
+
+.info-item a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1.15rem;
+}
+
+.info-item a:hover {
+  color: var(--accent-dark);
+  transform: translateX(3px);
+}
+
+.info-item p {
+  color: var(--text-body);
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+/* === SOCIAL SECTION (OUTSIDE BOX) === */
+.social-section {
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.social-section h4 {
+  font-size: 1.5rem;
+  color: var(--text);
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  width: 60px;
+  height: 60px;
+  border: 2.5px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.4rem;
+}
+
+.social-links a:hover {
+  background: var(--accent);
+  color: var(--on-accent);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(var(--accent-rgb), 0.3);
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
-  .footer {
-    padding: 15px 0;
+  .contact {
+    padding: 60px 15px 40px 15px;
   }
 
-  .footer p {
-    font-size: 0.8rem;
+  .contact-header h1 {
+    font-size: 2.5rem;
   }
-}
 
-@media (max-width: 480px) {
-  .footer p {
-    font-size: 0.75rem;
-    padding: 0 10px;
+  .contact-info {
+    padding: 0;
+  }
+
+  .contact-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .info-item h4 {
+    font-size: 1.2rem;
+  }
+
+  .info-item a,
+  .info-item p {
+    font-size: 1rem;
+  }
+
+  .info-item {
+    margin-bottom: 35px;
+    padding-bottom: 0;
   }
 }
