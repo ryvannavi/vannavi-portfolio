@@ -9,9 +9,9 @@ html {
 }
 
 body {
-  font-family: 'Poppins', 'Roboto', sans-serif;
-  color: #2d2d2d;
-  background: #faf8f3;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
   overflow-x: hidden;
 }
 
@@ -99,33 +99,33 @@ section {
 }
 
 .btn-primary {
-  background: #a85a3a;
-  color: white;
-  box-shadow: 0 6px 20px rgba(168, 90, 58, 0.3);
+  background: var(--accent);
+  color: var(--on-accent);
+  box-shadow: 0 6px 20px rgba(var(--accent-rgb), 0.3);
 }
 
 .btn-primary:hover {
-  background: #8b4a2e;
+  background: var(--accent-dark);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(168, 90, 58, 0.4);
+  box-shadow: 0 10px 30px rgba(var(--accent-rgb), 0.4);
 }
 
 .btn-outline {
   background: transparent;
-  color: #a85a3a;
-  border: 2px solid #a85a3a;
+  color: var(--accent);
+  border: 2px solid var(--accent);
 }
 
 .btn-outline:hover {
-  background: #a85a3a;
-  color: white;
+  background: var(--accent);
+  color: var(--on-accent);
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(168, 90, 58, 0.3);
+  box-shadow: 0 6px 20px rgba(var(--accent-rgb), 0.3);
 }
 
 .btn:focus-visible,
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid rgba(168, 90, 58, 0.45);
+  outline: 3px solid rgba(var(--accent-rgb), 0.45);
   outline-offset: 3px;
 }
