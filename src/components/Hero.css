@@ -1,5 +1,5 @@
 .hero {
-  background: linear-gradient(135deg, #faf8f3 0%, #f5f0e8 100%);
+  background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
   padding: 120px 0;
   min-height: 100vh;
   display: flex;
@@ -14,7 +14,7 @@
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: rgba(168, 90, 58, 0.1);
+  background: rgba(var(--accent-rgb), 0.1);
   top: -100px;
   right: -100px;
   z-index: 0;
@@ -26,7 +26,7 @@
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: rgba(168, 90, 58, 0.08);
+  background: rgba(var(--accent-rgb), 0.08);
   bottom: -50px;
   left: -50px;
   z-index: 0;
@@ -57,19 +57,19 @@
 
 .hero-text h1 {
   font-size: 3.5rem;
-  color: #2d2d2d;
+  color: var(--text);
   margin-bottom: 1rem;
   line-height: 1.1;
   font-weight: 800;
 }
 
 .highlight {
-  color: #a85a3a;
+  color: var(--accent);
 }
 
 .hero-text h2 {
   font-size: 1.8rem;
-  color: #a85a3a;
+  color: var(--accent);
   font-weight: 600;
   margin-bottom: 1.5rem;
   min-height: 50px;
@@ -84,7 +84,7 @@
 
 .cursor {
   animation: blink 1s infinite;
-  color: #a85a3a;
+  color: var(--accent);
   font-weight: 800;
 }
 
@@ -95,7 +95,7 @@
 
 .hero-text p {
   font-size: 1rem;
-  color: #5a5a5a;
+  color: var(--text-body);
   line-height: 1.8;
   margin-bottom: 2.5rem;
   max-width: 550px;
@@ -121,28 +121,28 @@
 }
 
 .btn-primary {
-  background: #a85a3a;
-  color: white;
-  box-shadow: 0 6px 20px rgba(168, 90, 58, 0.3);
+  background: var(--accent);
+  color: var(--on-accent);
+  box-shadow: 0 6px 20px rgba(var(--accent-rgb), 0.3);
 }
 
 .btn-primary:hover {
-  background: #8b4a2e;
+  background: var(--accent-dark);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(168, 90, 58, 0.4);
+  box-shadow: 0 10px 30px rgba(var(--accent-rgb), 0.4);
 }
 
 .btn-outline {
   background: transparent;
-  color: #a85a3a;
-  border: 2px solid #a85a3a;
+  color: var(--accent);
+  border: 2px solid var(--accent);
 }
 
 .btn-outline:hover {
-  background: #a85a3a;
-  color: white;
+  background: var(--accent);
+  color: var(--on-accent);
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(168, 90, 58, 0.3);
+  box-shadow: 0 6px 20px rgba(var(--accent-rgb), 0.3);
 }
 
 .social-links {
@@ -156,20 +156,20 @@
 .social-links a {
   width: 48px;
   height: 48px;
-  border: 2px solid #d4c5b9;
+  border: 2px solid var(--border);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   transition: all 0.3s ease;
-  color: #a85a3a;
+  color: var(--accent);
 }
 
 .social-links a:hover {
-  background: #a85a3a;
-  color: white;
-  border-color: #a85a3a;
+  background: var(--accent);
+  color: var(--on-accent);
+  border-color: var(--accent);
   transform: translateY(-5px);
 }
 
@@ -189,8 +189,8 @@
   width: 100%;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(168, 90, 58, 0.2);
-  border: 3px solid #a85a3a;
+  box-shadow: 0 20px 60px rgba(var(--accent-rgb), 0.2);
+  border: 3px solid var(--accent);
 }
 
 .floating-elements {
@@ -203,8 +203,8 @@
 
 .floating-card {
   position: absolute;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(250, 248, 243, 0.95));
-  border: 2px solid #a85a3a;
+  background: linear-gradient(135deg, rgba(var(--surface-rgb), 0.95), rgba(var(--bg-rgb), 0.95));
+  border: 2px solid var(--accent);
   border-radius: 15px;
   padding: 8px 12px;  
   display: flex;
@@ -212,9 +212,9 @@
   align-items: center;
   gap: 4px;  
   font-weight: 600;
-  color: #a85a3a;
+  color: var(--accent);
   font-size: 0.7rem;  
-  box-shadow: 0 8px 24px rgba(168, 90, 58, 0.15);
+  box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.15);
   animation: float 3s ease-in-out infinite;
   transition: all 0.3s ease;
   width: 70px;  
@@ -222,7 +222,7 @@
 
 .floating-card i {
   font-size: 1.1rem;  
-  color: #a85a3a;
+  color: var(--accent);
 }
 
 .floating-card.design {
@@ -245,7 +245,7 @@
 
 .floating-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 32px rgba(168, 90, 58, 0.25);
+  box-shadow: 0 12px 32px rgba(var(--accent-rgb), 0.25);
 }
 
 @keyframes float {
