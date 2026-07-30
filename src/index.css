@@ -136,6 +136,67 @@
 }
    ------------------------------------------------------------ */
 
+/* ------------------------------------------------------------
+   LIGHT CARDS ON DARK BACKGROUND
+
+   The page stays Ink & Brass. These boxes flip to warm paper so
+   dense content is easy to read.
+
+   This works by redefining the theme variables INSIDE each card.
+   Custom properties inherit, so every heading, paragraph, label,
+   border and badge inside the card picks up the light values
+   automatically — no component CSS needs to change.
+
+   To turn this off, delete this whole block. Cards go back to
+   dark charcoal.
+   ------------------------------------------------------------ */
+.about-stats,
+.education-item,
+.language-item,
+.interest-card,
+.skill-badge,
+.cert-card,
+.resume-grid,
+.timeline-content,
+.project-card,
+.skill-category-box,
+.skills-summary {
+  --surface: #ffffff;
+  --surface-rgb: 255, 255, 255;
+
+  --bg: #f6f3ec;
+  --bg-alt: #efeade;
+  --bg-rgb: 246, 243, 236;
+
+  --text: #17191d;
+  --text-rgb: 23, 25, 29;
+  --text-body: #4b5058;
+  --text-muted: #6c727c;
+  --text-soft: #8b919a;
+
+  --accent: #8c6a33;
+  --accent-dark: #6e5226;
+  --accent-light: #b08a4a;
+  --accent-rgb: 140, 106, 51;
+  --on-accent: #ffffff;
+
+  --border: #e2dccf;
+  --track: #e7e1d4;
+  --shadow-rgb: 20, 16, 10;
+
+  background: #f6f3ec;
+  border-color: #e2dccf;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Nested boxes sit on the parent card, so they need to be lighter
+   than it rather than repeating the same paper tone. */
+.resume-grid .timeline-content,
+.project-card .demo-account,
+.about-stats .stat-item {
+  background: #ffffff;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
