@@ -56,8 +56,8 @@ function Hero({ onNavigate }) {
             </h1>
 
             <h2>
-              <span style={{ color: "#a85a3a" }}>Creative</span>
-              <span className="typed" style={{ color: "#2d2d2d" }}>
+              <span style={{ color: "var(--accent)" }}>Creative</span>
+              <span className="typed" style={{ color: "var(--text)" }}>
                 {displayText}
                 <span className="cursor">|</span>
               </span>
@@ -77,6 +77,14 @@ function Hero({ onNavigate }) {
               <button onClick={handleGetInTouch} className="btn btn-outline">
                 Get In Touch
               </button>
+              <a
+                href="https://drive.google.com/file/d/16OH5njkKtTB5pwK-Pt-we8FLn5W7zhuK/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline"
+              >
+                <i className="fa-solid fa-file-pdf"></i> My Resume
+              </a>
             </div>
 
             <div className="social-links">
