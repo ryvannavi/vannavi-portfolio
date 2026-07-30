@@ -1,6 +1,6 @@
 /* === CERTIFICATION PAGE === */
 .certification {
-  background: linear-gradient(135deg, #faf8f3 0%, #f5f0e8 100%);
+  background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
   min-height: 100vh;
   padding: 80px 0;
 }
@@ -14,17 +14,17 @@
 .certification-header h1 {
   font-size: 3rem;
   margin-bottom: 15px;
-  color: #2d2d2d;
+  color: var(--text);
 }
 
 .certification-header .highlight {
-  color: #a85a3a;
+  color: var(--accent);
   font-weight: 800;
 }
 
 .certification-header .subtitle {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -37,26 +37,26 @@
 }
 
 .cert-card {
-  background: white;
+  background: var(--surface);
   padding: 30px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 8px 24px rgba(168, 90, 58, 0.1);
-  border: 1px solid rgba(168, 90, 58, 0.1);
+  box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.1);
+  border: 1px solid rgba(var(--accent-rgb), 0.1);
   transition: all 0.3s ease;
   animation: fadeInUp 0.8s ease-out;
 }
 
 .cert-card:hover {
-  box-shadow: 0 12px 32px rgba(168, 90, 58, 0.2);
+  box-shadow: 0 12px 32px rgba(var(--accent-rgb), 0.2);
   transform: translateY(-10px);
-  border-color: #a85a3a;
+  border-color: var(--accent);
 }
 
 .cert-icon {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, rgba(168, 90, 58, 0.1), rgba(168, 90, 58, 0.05));
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.1), rgba(var(--accent-rgb), 0.05));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -66,35 +66,35 @@
 }
 
 .cert-card:hover .cert-icon {
-  background: linear-gradient(135deg, #a85a3a, rgba(168, 90, 58, 0.8));
+  background: linear-gradient(135deg, var(--accent), rgba(var(--accent-rgb), 0.8));
 }
 
 .cert-icon i {
   font-size: 2rem;
-  color: #a85a3a;
+  color: var(--accent);
 }
 
 .cert-card:hover .cert-icon i {
-  color: white;
+  color: var(--on-accent);
 }
 
 .cert-card h3 {
   font-size: 1.2rem;
-  color: #2d2d2d;
+  color: var(--text);
   margin: 15px 0 8px;
   font-weight: 700;
 }
 
 .cert-card .issuer {
   font-size: 0.9rem;
-  color: #a85a3a;
+  color: var(--accent);
   margin: 8px 0;
   font-weight: 600;
 }
 
 .cert-card .date {
   font-size: 0.85rem;
-  color: #666;
+  color: var(--text-muted);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,12 +103,12 @@
 }
 
 .cert-card .date i {
-  color: #a85a3a;
+  color: var(--accent);
 }
 
 .cert-card .description {
   font-size: 0.9rem;
-  color: #5a5a5a;
+  color: var(--text-body);
   line-height: 1.6;
   margin-top: 15px;
 }
@@ -117,14 +117,14 @@
 .empty-state {
   text-align: center;
   padding: 60px 20px;
-  background: rgba(168, 90, 58, 0.05);
+  background: rgba(var(--accent-rgb), 0.05);
   border-radius: 12px;
-  border: 2px dashed #a85a3a;
+  border: 2px dashed var(--accent);
 }
 
 .empty-state p {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-muted);
   margin: 0;
 }
 
