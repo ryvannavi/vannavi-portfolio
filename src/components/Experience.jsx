@@ -207,9 +207,7 @@ function Experience({ initialTab = 'resume', onTabChange }) {
 
                 <p className="cert-course">
                   <i className="fa-solid fa-book"></i>
-                  <a href="https://aupp.instructure.com/courses/3650" target="_blank" rel="noopener noreferrer">
-                    ITM 380 001 - Cloud Computing
-                  </a>
+                  ITM 380 001 - Cloud Computing
                 </p>
 
                 <div className="cert-meta">
@@ -248,9 +246,7 @@ function Experience({ initialTab = 'resume', onTabChange }) {
 
                 <p className="cert-course">
                   <i className="fa-solid fa-book"></i>
-                  <a href="https://aupp.instructure.com/courses/3930" target="_blank" rel="noopener noreferrer">
-                    CLD 372 001 - Cloud Solutions Architect
-                  </a>
+                  CLD 372 001 - Cloud Solutions Architect
                 </p>
 
                 <div className="cert-meta">
@@ -289,9 +285,7 @@ function Experience({ initialTab = 'resume', onTabChange }) {
 
                 <p className="cert-course">
                   <i className="fa-solid fa-book"></i>
-                  <a href="https://aupp.instructure.com/courses/3929" target="_blank" rel="noopener noreferrer">
-                    CLD 371 001 - Cloud Operations
-                  </a>
+                  CLD 371 001 - Cloud Operations
                 </p>
 
                 <div className="cert-meta">
