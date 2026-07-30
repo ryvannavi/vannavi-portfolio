@@ -1,54 +1,255 @@
-* {
+/* ============================================================
+   Vannavi Ry — Portfolio theme system
+   Every colour in src/components/*.css should be a var() from
+   this file. Change a theme by swapping the :root block below.
+   ============================================================ */
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ------------------------------------------------------------
+   ACTIVE THEME — Ink & Brass
+   Dark charcoal + muted brass. Fraunces headings, Inter body.
+   ------------------------------------------------------------ */
 :root {
-  --bg-primary: #faf8f3;
-  --bg-secondary: #f0ece4;
-  --accent-color: #a85a3a;
-  --text-primary: #2d2d2d;
-  --text-secondary: #5a5a5a;
-  --border-color: #d4c5b9;
-  --accent-light: #f5ede5;
-  --accent-dark: #8b4a2e;
+  color-scheme: dark;
+
+  /* Accent */
+  --accent: #c89b5a;
+  --accent-dark: #a87f42;
+  --accent-light: #e0bc85;
+  --accent-rgb: 200, 155, 90;
+  --on-accent: #14161a;
+
+  /* Background */
+  --bg: #101317;
+  --bg-alt: #161a20;
+  --bg-rgb: 16, 19, 23;
+
+  /* Surfaces (cards, panels) */
+  --surface: #1b2027;
+  --surface-rgb: 27, 32, 39;
+
+  /* Text */
+  --text: #eceef1;
+  --text-rgb: 236, 238, 241;
+  --text-body: #b4bac4;
+  --text-muted: #8c939f;
+  --text-soft: #6e7681;
+
+  /* Lines & shadow */
+  --border: #2c323b;
+  --track: #262b33;
+  --shadow-rgb: 0, 0, 0;
+
+  /* Type */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', Menlo, Consolas, monospace;
+
+  /* Legacy aliases — old names still referenced anywhere in the codebase.
+     Safe to delete once `grep -rn "\-\-accent-color\|--bg-primary\|--text-primary\|--bg-secondary\|--border-color" src`
+     comes back empty. */
+  --accent-color: var(--accent);
+  --bg-primary: var(--bg);
+  --bg-secondary: var(--bg-alt);
+  --text-primary: var(--text);
+  --text-secondary: var(--text-body);
+  --border-color: var(--border);
 }
+
+/* ------------------------------------------------------------
+   ALTERNATE THEME A — Graphite & Forest (light)
+   To use: comment out the :root above, uncomment this one,
+   and swap the font links in index.html to Sora.
+   ------------------------------------------------------------
+:root {
+  color-scheme: light;
+  --accent: #2f5d4a;
+  --accent-dark: #234739;
+  --accent-light: #6a9481;
+  --accent-rgb: 47, 93, 74;
+  --on-accent: #ffffff;
+  --bg: #f7f7f5;
+  --bg-alt: #eeeeea;
+  --bg-rgb: 247, 247, 245;
+  --surface: #ffffff;
+  --surface-rgb: 255, 255, 255;
+  --text: #1c1f1d;
+  --text-rgb: 28, 31, 29;
+  --text-body: #4a4f4c;
+  --text-muted: #6f7570;
+  --text-soft: #949a95;
+  --border: #dcded9;
+  --track: #e6e8e3;
+  --shadow-rgb: 20, 30, 25;
+  --font-display: 'Sora', 'Helvetica Neue', sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', Menlo, monospace;
+  --accent-color: var(--accent);
+  --bg-primary: var(--bg);
+  --bg-secondary: var(--bg-alt);
+  --text-primary: var(--text);
+  --text-secondary: var(--text-body);
+  --border-color: var(--border);
+}
+   ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
+   ALTERNATE THEME B — Bone & Navy (light)
+   Swap the font links in index.html to Instrument Serif.
+   ------------------------------------------------------------
+:root {
+  color-scheme: light;
+  --accent: #1d4e89;
+  --accent-dark: #143a68;
+  --accent-light: #5b83b5;
+  --accent-rgb: 29, 78, 137;
+  --on-accent: #ffffff;
+  --bg: #faf9f6;
+  --bg-alt: #f1efe9;
+  --bg-rgb: 250, 249, 246;
+  --surface: #ffffff;
+  --surface-rgb: 255, 255, 255;
+  --text: #161b22;
+  --text-rgb: 22, 27, 34;
+  --text-body: #454c56;
+  --text-muted: #6b727c;
+  --text-soft: #949aa3;
+  --border: #ddd9cf;
+  --track: #e8e4da;
+  --shadow-rgb: 16, 24, 40;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', Menlo, monospace;
+  --accent-color: var(--accent);
+  --bg-primary: var(--bg);
+  --bg-secondary: var(--bg-alt);
+  --text-primary: var(--text);
+  --text-secondary: var(--text-body);
+  --border-color: var(--border);
+}
+   ------------------------------------------------------------ */
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  background-color: var(--bg);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  color: var(--text);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  font-weight: 600;
 }
 
-/* Scrollbar Styling */
+p {
+  color: var(--text-body);
+}
+
+a {
+  color: var(--accent);
+}
+
+code,
+pre,
+kbd {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-secondary);
+  background: var(--bg-alt);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent-color);
+  background: var(--accent-dark);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-dark);
+  background: var(--accent);
+}
+
+* {
+  scrollbar-color: var(--accent-dark) var(--bg-alt);
+}
+
+/* Motion safety — fade-in sections start at opacity: 0, so they must be
+   forced visible when the user has reduced motion enabled. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [class*='fade'],
+  [class*='reveal'],
+  [class*='animate'] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
